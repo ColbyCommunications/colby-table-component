@@ -1,0 +1,26 @@
+// Default values
+$state-warning-text: #8a6d3b !default;
+$state-warning-bg: #fcf8e3 !default;
+
+.margin {
+    margin-bottom: 5px;
+}
+.filterBlock {
+    position: relative;
+}
+.isFilter input {
+    background-color: $state-warning-bg;
+    padding-right: 22px;
+    border-color: $state-warning-text;
+}
+.cleanButton {
+    position: absolute;
+    right: 5px;
+    top: 39%;
+    margin-top: -8px;
+    font-size: 14px;
+    height: 24px;
+    cursor: pointer;
+    line-height: 1;
+    border: 1px solid #ccc;
+}

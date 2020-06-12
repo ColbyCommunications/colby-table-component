@@ -1,0 +1,56 @@
+/* @import 'app_variables'; */
+
+// Default values
+$state-danger-bg: #f2dede !default;
+$state-danger-text: #a94442 !default;
+$state-danger-border: #ebccd1 !default;
+
+.wrapper {
+    position: relative;
+}
+.error {
+    position: absolute;
+    width: 100%;
+    bottom: 100%;
+    margin: 0 0 11px 0;
+    padding: 5px;
+    background-color: $state-danger-bg;
+    background-image: linear-gradient(
+        to top,
+        $state-danger-bg 0px,
+        darken($state-danger-bg, 10%) 100%
+    );
+    color: $state-danger-text;
+    border: 1px solid darken($state-danger-border, 10%);
+    border-radius: 4px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 1.3;
+    z-index: 98;
+}
+.error:before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -10px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: $state-danger-bg transparent transparent transparent;
+    z-index: 99;
+}
+.error:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -11px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 11px 11px 0 11px;
+    border-color: darken($state-danger-border, 10%) transparent transparent transparent;
+    z-index: 98;
+}

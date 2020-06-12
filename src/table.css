@@ -1,0 +1,175 @@
+// Default values
+$brand-primary: #337ab7 !default;
+
+.tableScroll {
+    overflow-x: auto;
+}
+.table {
+    margin: 0;
+    background-color: #fff;
+}
+.tableWrapper :global .table-bordered > thead > tr > th {
+    border-top-width: 0;
+    border-bottom-width: 0;
+}
+.tableWrapper :global .table-bordered > thead > tr:last-child > th {
+    border-bottom-width: 2px;
+}
+.tableWrapper :global .table > thead > tr > th {
+    vertical-align: top;
+}
+
+.countBlock {
+    line-height: 30px;
+}
+.buttons {
+    margin-right: 10px;
+}
+.button {
+    margin-right: 5px;
+}
+.button:last-child {
+    margin-right: 0;
+}
+.paginator {
+    margin: 0;
+
+    > li > a {
+        float: none;
+        display: inline-block;
+    }
+}
+.topBar {
+    margin-bottom: 10px;
+}
+.bottomBar {
+    margin-top: 10px;
+}
+
+/*****************************************************************************/
+/* checkbox column */
+/*****************************************************************************/
+.checkboxColumn {
+    text-align: center;
+    width: 45px;
+}
+.checkboxColumn.checkboxColumnSimple {
+    width: 30px;
+}
+.checkboxColumn label {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+.checkboxColumn input[type='checkbox'] {
+    margin: 0;
+}
+
+/*****************************************************************************/
+/* number column */
+/*****************************************************************************/
+.numberColumn {
+    text-align: right;
+    width: 5px;
+}
+
+/*****************************************************************************/
+/* sortable columns */
+/*****************************************************************************/
+.sortable {
+    cursor: pointer;
+    color: $brand-primary;
+    position: relative;
+    padding-right: 20px !important;
+}
+.sortable:before,
+.sortable:after {
+    font-size: 13px;
+    color: lighten($brand-primary, 35%);
+    position: absolute;
+    right: 5px;
+    top: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    height: 15px;
+    width: 15px;
+}
+.sortable:before {
+    margin-top: -11px;
+    display: inline-block;
+    content: '';
+    background-image: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M7.247 4.86l-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z' clip-rule='evenodd'/></svg>");
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+}
+.sortable:after {
+    margin-top: -2px;
+    display: inline-block;
+    content: '';
+    background-image: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z' clip-rule='evenodd'/></svg>");
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+}
+.sortable_asc:before {
+    color: $brand-primary;
+    margin-top: -7px;
+}
+.sortable_asc:after {
+    display: none;
+}
+.sortable_desc:before {
+    display: none;
+}
+.sortable_desc:after {
+    color: $brand-primary;
+    margin-top: -7px;
+}
+.selected td {
+    position: relative;
+
+    &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        background-color: $brand-primary;
+        opacity: 0.3;
+        z-index: 999;
+        pointer-events: none;
+    }
+}
+.marginBottom {
+    margin-bottom: 10px;
+}
+.clickableRow:hover td {
+    position: relative;
+    cursor: pointer;
+
+    &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        background-color: $brand-primary;
+        opacity: 0.1;
+        z-index: 999;
+        pointer-events: none;
+    }
+}
+
+.checkAllBtn {
+    border: none;
+    background-color: #fff;
+    color: $brand-primary;
+}
+
+.checkAllBtn:focus {
+    outline: none;
+}

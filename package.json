@@ -1,0 +1,47 @@
+{
+    "name": "@colbycommunications/colby-table-component",
+    "version": "1.0.0",
+    "description": "A table component that can sort, filter, and represent dynamic data.",
+    "main": "dist/index.js",
+    "author": "Brandon K. Waltz",
+    "license": "MIT",
+    "peerDependencies": {},
+    "scripts": {
+        "build": "colby-package-build",
+        "build:watch": "colby-package-build --watch --verbose",
+        "lint": "colby-package-lint",
+        "format": "colby-package-format",
+        "test": "colby-package-test --watch",
+        "check": "colby-package-lint && colby-package-test",
+        "prepublishOnly": "colby-package-registry && npm run check && colby-package-build"
+    },
+    "devDependencies": {
+        "@colbycommunications/colby-package": "^2.2.3"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "colby-package-format -s && colby-package-lint -s && colby-package-test -s"
+        }
+    },
+    "dependencies": {
+        "@colbycommunications/colby-click-button-component": "^1.0.0",
+        "@colbycommunications/colby-confirm-component": "^1.0.1",
+        "@colbycommunications/colby-datepicker-component": "^1.0.0",
+        "@colbycommunications/colby-loader": "^2.0.2",
+        "@colbycommunications/colby-paginator-component": "^1.0.0",
+        "classnames": "^2.2.3",
+        "lodash": "^4.15.0",
+        "md5": "^2.0.0",
+        "moment": "^2.11.2",
+        "prop-types": "^15.5.10",
+        "react": "^16.0.0",
+        "react-dom": "^16.0.0",
+        "react-redux": "^5.0.7",
+        "react-router-redux": "^4.0.8",
+        "redux": "^4.0.0",
+        "redux-actions": "^2.6.5",
+        "redux-form": "^8.0.0",
+        "redux-thunk": "^2.3.0",
+        "store": "^2.0.4"
+    }
+}

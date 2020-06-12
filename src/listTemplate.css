@@ -1,0 +1,16 @@
+.sorting {
+    margin-bottom: 2em;
+}
+.topPaginator {
+    margin-bottom: 1.5em;
+}
+.bottomPaginator {
+    margin-top: 1.5em;
+}
+.list > div {
+    margin-bottom: 2em;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
