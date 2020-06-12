@@ -1,6 +1,6 @@
 {
     "name": "@colbycommunications/colby-table-component",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A table component that can sort, filter, and represent dynamic data.",
     "main": "dist/index.js",
     "author": "Brandon K. Waltz",

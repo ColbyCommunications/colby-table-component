@@ -54,7 +54,7 @@ export default class FilterDate extends React.Component {
         this.props.onFilterChange(this.props.column, newFilter);
     };
 
-    _renderDateField = ({ date, placeholder, onChange, onClear }) => {
+    renderDateField = ({ date, placeholder, onChange, onClear }) => {
         const value = date ? moment(date) : null;
 
         let cleanButton = null;
